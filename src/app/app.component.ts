@@ -7,7 +7,7 @@ import { AppService } from './app.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'My title';
+  title = 'Tour of Heroes';
   num = 5;
 
   constructor(private appSrv: AppService) {

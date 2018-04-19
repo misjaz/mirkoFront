@@ -1,10 +1,30 @@
-  <h1>
-    {{num}}!
-  </h1>
-  <h1>{{title}}</h1>
-  <nav>
-    <a routerLink="/dashboard">Dashboard</a>
-    <a routerLink="/heroes">Heroes</a>
-  </nav>
-  <router-outlet></router-outlet>
-  <!-- <app-messages></app-messages> -->
+
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+  <logo>
+      <a class="navbar-brand" href="#">Navbar</a>
+  </logo>
+  <links>
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+              <a class="nav-link waves-light" href="#" mdbWavesEffect>Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link waves-light" href="#" mdbWavesEffect>Features</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link waves-light" href="#" mdbWavesEffect>Pricing</a>
+          </li>
+          <span class="rightmost">
+            {{num}}
+        </span> 
+      </ul>
+     
+  </links>
+</mdb-navbar>
+
+<!-- <nav> -->
+<!-- <a routerLink="/dashboard">Dashboard</a> -->
+<!-- <a routerLink="/heroes">Heroes</a> -->
+<!-- </nav> -->
+<!-- <router-outlet></router-outlet> -->
+<!-- <app-messages></app-messages> -->

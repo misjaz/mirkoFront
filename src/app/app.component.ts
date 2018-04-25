@@ -24,7 +24,6 @@ export class AppComponent implements OnInit {
     this.appSrv.getUsersFromDB()
       .subscribe(res => {
         this.users = res;
-        this.name = res[0].name;
       });
   }
 

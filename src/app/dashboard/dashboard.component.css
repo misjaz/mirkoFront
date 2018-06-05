@@ -17,6 +17,7 @@
   }
   h3 {
     text-align: center; margin-bottom: 0;
+    margin-top: 50px;
   }
   h4 {
     position: relative;
@@ -34,7 +35,7 @@
     max-height: 120px;
     min-width: 120px;
     background-color: #607D8B;
-    border-radius: 2px;
+    border-radius: 10px;
   }
   .module:hover {
     background-color: #EEE;
@@ -42,7 +43,8 @@
     color: #607d8b;
   }
   .grid-pad {
-    padding: 10px 0;
+    padding-top: 150px;
+    padding-left: 300px;
   }
   .grid-pad > [class*='col-']:last-of-type {
     padding-right: 20px;

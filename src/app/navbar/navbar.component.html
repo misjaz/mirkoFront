@@ -1,25 +1,27 @@
-<td-layout>
-  <td-navigation-drawer flex sidenavTitle="Covalent" logo="assets:teradata" name="Firstname Lastname" email="firstname.lastname@company.com">
-    <mat-nav-list>
-      <a mat-list-item>
-        <mat-icon>home</mat-icon>Home</a>
-    </mat-nav-list>
-    <div td-navigation-drawer-menu>
+<div>
+  <td-layout>
+    <td-navigation-drawer flex sidenavTitle="Covalent" logo="assets:teradata" name="Firstname Lastname" email="firstname.lastname@company.com">
       <mat-nav-list>
         <a mat-list-item>
-          <mat-icon>account_box</mat-icon>Profile</a>
+          <mat-icon>home</mat-icon>Home</a>
       </mat-nav-list>
-    </div>
-  </td-navigation-drawer>
-  <td-layout-nav navigationRoute="/">
-    <div td-toolbar-content layout="row" layout-align="start center" flex>
-      <button mat-icon-button td-menu-button tdLayoutToggle>
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span [routerLink]="['/']" style="margin-left: 50px">Home</span>
-      <span flex></span>
-      <span style="margin-right: 15px">{{connection}}</span>
-    </div>
-    <ng-content></ng-content>
-  </td-layout-nav>
-</td-layout>
+      <div td-navigation-drawer-menu>
+        <mat-nav-list>
+          <a mat-list-item>
+            <mat-icon>account_box</mat-icon>Profile</a>
+        </mat-nav-list>
+      </div>
+    </td-navigation-drawer>
+    <td-layout-nav navigationRoute="/">
+      <div td-toolbar-content layout="row" layout-align="start center" flex>
+        <button mat-icon-button td-menu-button tdLayoutToggle>
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span [routerLink]="['/']" style="margin-left: 50px">Home</span>
+        <span flex></span>
+        <span style="margin-right: 15px">{{connection}}</span>
+      </div>
+      <ng-content></ng-content>
+    </td-layout-nav>
+  </td-layout>
+</div>

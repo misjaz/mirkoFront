@@ -1,3 +1,46 @@
-<p>
-  user works!
-</p>
+<div fxLayout="row" fxLayoutAlign="none" class="container">
+  <div class="left-form">
+    <form [formGroup]="form">
+      <div class="fields">
+        <div class="one-field">
+          <mat-form-field>
+            <input formControlName="name" matInput placeholder="Name" autocomplete="off">
+          </mat-form-field>
+        </div>
+        <div class="one-field">
+          <mat-form-field>
+            <input formControlName="email" matInput placeholder="Email" autocomplete="off">
+          </mat-form-field>
+        </div>
+        <div class="one-field">
+          <mat-form-field>
+            <mat-select placeholder="Companies">
+              <mat-option *ngFor="let company of companies" [value]="company">
+                {{company}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <button id="add-btn" mat-raised-button color="primary" (click)="addUser()">Add</button>
+      </div>
+    </form>
+  </div>
+  <div class="table">
+    <td-data-table [data]="users" [columns]="configWidthColumns" #dataTable>
+      <!-- <ng-template tdDataTableTemplate="name" let-value="row.name" let-row="row" let-column="column">
+          <div layout="row">
+            <span flex>{{value}}</span>
+          </div>
+        </ng-template> -->
+    </td-data-table>
+    <td-paging-bar #pagingBar [pageSize]="page.size" [total]="totalCount" [initialPage]="page.page">
+      <span td-paging-bar-label hide-xs>Rows per page</span>
+      <span hide-xs>of {{pagingBar.total}}</span>
+      <mat-select [style.width.px]="50" [(ngModel)]="pagingBar.pageSize">
+        <mat-option *ngFor="let size of [5, 10, 25, 50]" [value]="size">
+          {{size}}
+        </mat-option>
+      </mat-select>
+    </td-paging-bar>
+  </div>
+</div>

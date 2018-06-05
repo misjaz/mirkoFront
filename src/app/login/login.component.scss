@@ -1,0 +1,70 @@
+@import '~@angular/material/theming';
+@import '~app/theme-defs';
+// ----------------------------------------------------------------------------
+@mixin card-header-part($pad-top, $pad-bottom) {
+  color: mat-contrast($primary, 500);
+  margin: 0;
+  padding-top: $pad-top;
+  padding-bottom: $pad-bottom;
+}
+
+// ----------------------------------------------------------------------------
+.login {
+  background: map-color($mat-grey, 100);
+  //background: url(/assets/images/pattern.svg) no-repeat center center fixed;
+  background-size: cover;
+  mat-card-header {
+    background: mat-color($primary);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    div.header-image {
+      mat-icon {
+        color: mat-contrast($primary, 500);
+        font-size: 48px;
+      }
+      width: 48px;
+      padding-left: 12px;
+    }
+    mat-card-title {
+      @include card-header-part(20px, 10px);
+      font-size: 1.3rem;
+    }
+    mat-card-subtitle {
+      @include card-header-part(0, 20px);
+    }
+  }
+  mat-card-content,
+  mat-card-actions {
+    padding: 40px;
+  }
+  mat-card-actions {
+    padding-top: 0;
+    .lang-btn {
+      color: mat-color($mat-grey, 600);
+      margin: 0 5px 0 5px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+      &.sel {
+        border-bottom: 2px solid mat-color($mat-light-blue, 600);
+      }
+    }
+    button[type=submit] {
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  width: 500px;
+  margin:auto;
+}
+
+// ----------------------------------------------------------------------------
+// :host {
+//   display: flex;
+//   flex-direction: column;
+//   flex-grow: 1;
+//   flex-basis: 100%;
+// }

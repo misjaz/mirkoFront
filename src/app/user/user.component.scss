@@ -1,0 +1,39 @@
+.container {
+
+    .one-field {
+        padding: 20px, 20px;
+    }
+    .one-field:first-child {
+        margin-top: 80px;
+    }
+
+    #add-btn {
+        margin-top: 30px;
+        margin-left: 85px;
+    }
+
+    // display: flex;
+    // justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+}
+
+.table {
+    margin-left: 200px;
+    position: relative;
+}
+
+
+td-data-table {
+    overflow: auto;
+    &.no-data {
+      min-height: 70px;
+    }
+    &.zero-height {
+      overflow: initial;
+      &.no-data table.td-data-table{
+        min-height: 0px;
+      }
+    }
+  }

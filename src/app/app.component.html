@@ -1,12 +1,8 @@
 <app-navbar>
-    <div class="body">
-        <div *ngFor="let user of users">
-            {{user | json}}
-        </div>
-        <button mat-raised-button color="primary" style="margin-top: 25px" (click)="addUser()">Add user</button>
-        <button mat-raised-button color="primary" style="margin-top: 25px" (click)="deleteAllUsers()">Delete all users</button>
-    </div>
+    <router-outlet></router-outlet>
 </app-navbar>
+
+<!-- <app-login *ngIf="!authService.isLoggedIn"></app-login> -->
 
 
 <!-- <nav> -->
